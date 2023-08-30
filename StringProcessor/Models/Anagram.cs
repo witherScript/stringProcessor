@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 namespace StringProcessor.Models
 {
   public class Anagram
@@ -7,6 +9,12 @@ namespace StringProcessor.Models
     public Anagram(string referenceWord)
     {
       Reference = referenceWord;
+    }
+
+    public char[] ToArray()
+    {
+      char[] letterArr = Reference.ToCharArray();
+      return letterArr;
     }
   }
 }

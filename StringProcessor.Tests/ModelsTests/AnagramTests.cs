@@ -32,5 +32,19 @@ namespace StringProcessor.Tests
       collection.Reference = newWord;
       Assert.AreEqual(newWord, collection.Reference);
     }
+    [TestMethod]
+    public void ToArray_ShouldReturnCharArray_CharArray()
+    {
+      Anagram collection = new Anagram("word");
+      char[] actual = collection.ToArray();
+      char[] expected = {'w', 'o', 'r', 'd'};
+
+      CollectionAssert.AreEqual(expected, actual);
+    }
+    [TestMethod]
+    public void ListToArr_ShouldReturnArrayFromString_StringArray()
+    {
+
+    }
   }
 }
